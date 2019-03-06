@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/flyio/dist/fly.min.js"></script>
+    <title>koa</title>
+    <style>
+        #content{
+            margin:10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>title</header>
+    <div id="content"></div>
+    <div>
+        <button id="get">get</button>
+    </div>
+</body>
+<script>
+    document.getElementById('get').addEventListener('click',function(){
+        fly.get('/index').then(data=>{
+            console.log(data)
+        })
+    })
+</script>
+</html>
